@@ -22,10 +22,10 @@ national cyber-crime helpline **1930 / cybercrime.gov.in**.
 
 ## Quick start (offline, no keys)
 ```bash
-cd scam-detector
+git clone https://github.com/itsshreyasbhardwaj-design/scamshield && cd scamshield
 python3 -m venv .venv && . .venv/bin/activate
 pip install -r requirements.txt
-PYTHONPATH=. python -m pytest -q            # 89 tests, all green, zero keys
+PYTHONPATH=. python -m pytest -q            # 97 tests, all green, zero keys
 PYTHONPATH=. uvicorn app.main:app --reload  # open http://localhost:8000
 ```
 Try it:
