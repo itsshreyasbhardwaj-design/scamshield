@@ -1,0 +1,8 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6
+httpx>=0.27
+pytest>=8.0
+# Optional (only when going live; app runs without them in mock mode):
+#   pip install -e ../agentcore   # LLM explanations (Groq/Gemini/OpenRouter free tiers)
+#   sentry-sdk>=2.0               # error monitoring

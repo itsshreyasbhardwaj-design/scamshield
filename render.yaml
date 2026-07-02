@@ -1,0 +1,21 @@
+# Render.com free web service (Blueprint). Deploy: push repo, "New + Blueprint".
+services:
+  - type: web
+    name: scamshield
+    runtime: python
+    plan: free
+    region: singapore                 # closest free region to India
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      - key: ENV
+        value: production
+      - key: DEFAULT_COUNTRY
+        value: IN
+      # Set the rest as secrets in the Render dashboard (do NOT commit them):
+      #   LLM_PROVIDER, OPENAI_BASE_URL, OPENAI_API_KEY, OPENAI_MODEL,
+      #   SAFE_BROWSING_API_KEY, SUPABASE_URL, SUPABASE_ANON_KEY,
+      #   SUPABASE_SERVICE_ROLE_KEY, SENTRY_DSN
