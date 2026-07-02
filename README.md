@@ -1,5 +1,12 @@
 # ScamShield — AI Scam & Fraud Detection (built for India) 🛡️
 
+[![CI](https://github.com/itsshreyasbhardwaj-design/scamshield/actions/workflows/ci.yml/badge.svg)](https://github.com/itsshreyasbhardwaj-design/scamshield/actions/workflows/ci.yml)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/itsshreyasbhardwaj-design/scamshield)
+
+**One-click deploy:** click the **Deploy to Render** button above → sign in → it reads `render.yaml`
+and gives you a live public URL (free tier). The anonymous scanner works with zero keys; add the
+Supabase/LLM env vars later to switch on accounts + AI explanations.
+
 Paste a suspicious SMS, WhatsApp message, email, or link → get a **risk score (0–100)**,
 a clear verdict (**Safe / Suspicious / Dangerous**), the exact **signals** found, a
 **plain-language explanation** in your language, and **India-specific safety tips** — in
